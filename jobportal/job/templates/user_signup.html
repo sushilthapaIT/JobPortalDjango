@@ -1,0 +1,30 @@
+{% load static %}
+
+{% block body %}
+
+{% include 'navigation.html' %}
+
+<marquee style="font-family: 'Courier New', Courier, monospace; font-size: 25px; color: darkcyan;">
+    User SignUp
+</marquee>
+
+<form class="container mt-5" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>First Name</label>
+            <input type="text" class="form-control" name="fname" placeholder="Enter First Name" />
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>Last N Name</label>
+            <input type="text" class="form-control" name="lname" placeholder="Enter First Name" />
+        </div>
+    </div>
+    
+</form>
+
+
+{ %include 'footer.html'% }
+{% endblock %}
