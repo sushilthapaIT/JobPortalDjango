@@ -1,0 +1,19 @@
+{% load static %}
+
+{% block body %}
+
+{% include 'navigation.html' %}
+
+
+<form class="container mt-5" method="post">
+    {% csrf_token %}
+    <label><b>Email</b></label>
+    <input type="text" class="form-control" name="uname" placeholder="Enter email">
+
+    <label><b>Password</b></label>
+    <input type="password" class="form-control" name="pwd" placeholder="Enter Password">
+
+    <input type="submit" class="btn btn-primary" style="margin-top: 16px">
+</form>
+
+{% endblock %}
