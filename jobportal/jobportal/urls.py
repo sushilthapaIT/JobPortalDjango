@@ -21,6 +21,9 @@ from job.views import admin_login
 from job.views import user_login
 from job.views import recruiter_login
 from job.views import user_signup
+from job.views import *
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,6 +32,6 @@ urlpatterns = [
     path('user_login', user_login, name="user_login"),
     path('recruiter_login', recruiter_login, name="recruiter_login"),
     path('user_signup', user_signup, name="user_signup"),
-]
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 
